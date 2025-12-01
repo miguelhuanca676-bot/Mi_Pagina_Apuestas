@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruleta  FortunaSpin</title>
+    <link rel="stylesheet" href="css/ruleta.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1 class="logo">Fortuna<span>Spin</span></h1>
+        <button class="deposit-btn" onclick="window.location.href='deposito.html'">💰 Depositar</button>
+    </header>
+
+    <main class="game-container">
+
+        
+        <section id="panelUsuario">
+            <span id="mostrarUsuario"></span>
+            <span id="mostrarSaldo"></span>
+        </section>
+
+        <!-- SALDO -->
+        <aside class="saldo-box">
+            Saldo: <span id="saldoText">Cargando...</span>
+        </aside>
+
+        <!-- RULETA -->
+        <article class="ruleta-area">
+            <canvas id="ruletaCanvas" width="500" height="500"></canvas>
+            <p id="numeroGanador" class="numero-ganador"></p>
+            <p id="resultadoMensaje" class="resultado-mensaje"></p>
+        </article>
+
+        <!-- PANEL DE APUESTAS -->
+        <aside class="panel-apuesta">
+            <h2>Apuesta</h2>
+
+            <label>Monto a apostar (Bs):</label>
+            <input type="number" id="montoInput" placeholder="Monto">
+
+            <p style="margin-top:15px; font-weight: bold;">Elija SOLO una opcion:</p>
+
+            <label>Numero (0-36):</label>
+            <input type="number" id="numeroInput" placeholder="Ej: 13">
+
+            <label>Color (Rojo/Negro):</label>
+            <input type="text" id="colorInput" placeholder="Ej: Rojo o Negro">
+
+            <label>Tipo (Par/Impar):</label>
+            <input type="text" id="parImparInput" placeholder="Ej: Par o Impar">
+
+            <button id="btnApostar" class="btn-principal">Apostar y Girar</button>
+
+            <section class="historial">
+                <h3>Ultimos resultados</h3>
+                <ul id="historialLista"></ul>
+            </section>
+        </aside>
+
+        <!-- SOPORTE -->
+        <section style="text-align:center; margin-top:30px;">
+            <h3>Soporte TEcnico</h3>
+                <p>¿Necesitas ayuda? Contactanos:</p>
+                <p>Email: <b>soporte@fortunaspiin.com</b></p>
+                <p>WhatsApp: <b>+591 67136512</b></p>
+        </section>
+
+    </main>
+
+    <script src="js/ruleta.js"></script>
+</body>
+</html>

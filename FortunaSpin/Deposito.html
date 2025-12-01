@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deposito  FortunaSpin</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<main class="form-container">
+     <h2>Deposito</h2>
+     <p>Escanea este QR para simular un pago:</p>
+
+         <figure>
+            <img src="qr.png" width="200" alt="Código QR de Pago Simulado">
+            <figcaption>QR de Pago Simulado</figcaption><!-- Es Como la explicacion de la imagen -->
+        </figure>
+
+    <h3>Cargar comprobante:</h3>
+     <input type="file" id="archivo">
+    <button id="btnEnviar" class="btn-principal">Enviar comprobante</button>
+
+     <p id="mensaje"></p>
+     <input type="number" id="monto" placeholder="Ingresa el monto" required>
+    <button id="btnVolver" class="btn-principal">Volver a la Ruleta</button>
+</main>
+ <!-- SECCIÓN DE SOPORTE -->
+    <section style="text-align:center; margin-top:30px;">
+        <h3>Soporte Tecnico</h3>
+        <p>¿Necesitas ayuda? Contactanos:</p>
+        <p> Email: <b>soporte@fortunaspiin.com</b></p>
+        <p> WhatsApp: <b>+591 67136512</b></p>
+    </section>
+
+
+<script src="js/deposito.js"></script>
+</body>
+</html>
