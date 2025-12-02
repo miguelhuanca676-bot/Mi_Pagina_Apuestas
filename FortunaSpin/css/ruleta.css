@@ -1,0 +1,177 @@
+/* ==== FONDO GENERAL ==== */
+body{
+    margin:0;
+    font-family: 'Arial', sans-serif;
+    background: radial-gradient(circle at top,#1a0025,#000);
+    color:white;
+}
+
+/* ==== ENCABEZADO ==== */
+.header{
+    padding:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#220033;
+    box-shadow:0 2px 15px #ff00ff55;
+}
+
+.logo span{
+    color:#f806ea;
+}
+
+/* ==== BOTÓN DE DEPÓSITO ==== */
+.deposit-btn{
+    background:#06d6a0;
+    padding:10px 20px;
+    border-radius:10px;
+    border:none;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
+    transition:0.3s;
+    box-shadow:0 0 10px #00ffccaa;
+}
+.deposit-btn:hover{
+    background:#05b887;
+}
+
+/* ==== CONTENEDOR PRINCIPAL ==== */
+.Contenedor-Ruleta{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:40px;
+    padding:20px;
+}
+
+/* ==== RULETA ==== */
+.ruleta-area{
+    position:relative;
+    width:500px;
+    height:500px;
+}
+
+#ruletaCanvas{
+    border-radius:50%;
+    box-shadow:
+        0 0 30px #ff0090aa,
+        0 0 40px #ffd700aa inset,
+        0 0 70px #aa00ffaa;
+}
+#panelUsuario {
+    background: #140021;
+    padding: 15px;
+    border-bottom: 2px solid #ff00ff;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 0 0 10px #ff00ff;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 0 25px #ff00ffaa; 
+}
+
+/* ==== PANEL DE APUESTAS ==== */
+.panel-apuesta{
+    background: linear-gradient(145deg, #24003A, #3a0069);
+    padding:20px;
+    width:280px;
+    border-radius:15px;
+    box-shadow:0 0 25px #ff0090aa;
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.panel-apuesta input{
+    width:100%;
+    padding:8px;
+    margin-bottom:10px;
+    border-radius:6px;
+    border:none;
+    outline:none;
+    font-size:16px;
+}
+
+/* ==== BOTÓN PRINCIPAL ==== */
+.btn-principal{
+    width:100%;
+    padding:12px;
+    background:#ff0090;
+    border:none;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    font-size:18px;
+    border-radius:10px;
+    transition:0.3s;
+    box-shadow:0 0 20px #ff0090aa;
+}
+.btn-principal:hover{
+    background:#ff4cb5;
+}
+
+/* ==== SALDO ==== */
+.saldo-box{
+    position:absolute;
+    top:10px;
+    right:20px;
+    font-size:20px;
+    font-weight:bold;
+    color:#00ffcc;
+    text-shadow: 0 0 10px #00ffcc;
+}
+
+/* ==== HISTORIAL ==== */
+.historial{
+    margin-top:20px;
+}
+
+#historialLista{
+    display:flex;
+    flex-wrap: wrap;
+    gap:5px;
+    list-style:none;
+    padding:0;
+}
+
+#historialLista li{
+    padding:5px 10px;
+    font-weight:bold;
+    border-radius:5px;
+    color:white;
+    min-width:30px;
+    text-align:center;
+}
+
+/* ==== RESULTADO ==== */
+#resultadoMensaje{
+    margin-top:15px;
+    padding:10px;
+    border-radius:10px;
+    font-weight:bold;
+    text-align:center;
+    min-height:40px;
+    font-size:20px;
+    text-shadow:0 0 5px #fff;
+}
+
+/* ==== RESPONSIVO ==== */
+@media(max-width:900px){
+    .Contenedor-Ruleta{
+        flex-direction: column;
+        align-items:center;
+    }
+    .ruleta-area{
+        width:90%;
+        height:auto;
+    }
+    #ruletaCanvas{
+        width:100%;
+        height:auto;
+    }
+    .panel-apuesta{
+        width:90%;
+    }
+}

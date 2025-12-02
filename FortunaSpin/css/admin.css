@@ -1,0 +1,88 @@
+body {
+    background: #111;
+    color: white;
+    font-family: Arial;
+    padding: 20px;
+}
+
+.titulo {
+    text-align: center;
+    color: #ff0090;
+}
+
+.panel {
+    margin-top: 30px;
+    padding: 20px;
+    background: #222;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #444;
+}
+
+/* Inputs */
+input {
+    padding: 8px;
+    width: 100px;
+}
+#btnLimpiarComprobantes{
+    background:red;
+    color:white;
+    padding:12px;
+    margin:20px 0;
+    border:none;
+    font-size:18px;
+    cursor:pointer;
+    border-radius:10px;}
+    
+
+/* -----------------------------------------
+   RESPONSIVO PARA CELULAR
+------------------------------------------ */
+
+@media (max-width: 768px) {
+
+    th, td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    input {
+        width: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    table, thead, tbody, tr, th, td {
+        display: block;
+        width: 100%;
+    }
+
+    tr {
+        margin-bottom: 15px;
+        border-bottom: 2px solid #333;
+        padding-bottom: 10px;
+    }
+
+    th {
+        background: #333;
+        padding: 10px;
+    }
+
+    td {
+        padding: 8px 0;
+    }
+
+    input {
+        width: 100%;
+        margin-top: 5px;
+    }
+}
