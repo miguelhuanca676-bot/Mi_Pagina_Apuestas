@@ -14,60 +14,54 @@
     </header>
 
     <main class="Contenedor-Ruleta">
-
         <section id="panelUsuario">
-            <span id="mostrarUsuario"></span>
-            <span id="mostrarSaldo"></span>
+            <div class="usuario-info">
+                <span id="mostrarUsuario"></span>
+                <span id="mostrarSaldo"></span>
+            </div>
             <h3>Historial de tus apuestas</h3>
             <ul id="historialUsuario"></ul>
         </section>
 
-        <!-- SALDO -->
-        <aside class="saldo-box">
-            Saldo: <span id="saldoText">Cargando...</span>
-        </aside>
-
-        <!-- RULETA -->
-        <article class="ruleta-area">
+        <section class="ruleta-area">
             <canvas id="ruletaCanvas" width="500" height="500"></canvas>
             <p id="numeroGanador" class="numero-ganador"></p>
             <p id="resultadoMensaje" class="resultado-mensaje"></p>
-        </article>
+        </section>
 
-        <!-- PANEL DE APUESTAS -->
         <aside class="panel-apuesta">
             <h2>Apuesta</h2>
-
             <label>Monto a apostar (Bs):</label>
             <input type="number" id="montoInput" placeholder="Monto">
-
-            <p style="margin-top:15px; font-weight: bold;">Elija SOLO una opcion:</p>
-
             <label>Numero (0-36):</label>
             <input type="number" id="numeroInput" placeholder="Ej: 13">
 
-            <label>Color (Rojo/Negro):</label>
-            <input type="text" id="colorInput" placeholder="Ej: Rojo o Negro">
+            <div class="opciones">
+                <button id="rojoBtn" class="btn-opcion">Rojo</button>
+                <button id="negroBtn" class="btn-opcion">Negro</button>
+            </div>
 
-            <label>Tipo (Par/Impar):</label>
-            <input type="text" id="parImparInput" placeholder="Ej: Par o Impar">
+            <div class="opciones">
+                <button id="parBtn" class="btn-opcion">Par</button>
+                <button id="imparBtn" class="btn-opcion">Impar</button>
+            </div>
 
             <button id="btnApostar" class="btn-principal">Apostar y Girar</button>
-
-            <section class="historial">
-                <h3>Ultimos resultados</h3>
-                <ul id="historialLista"></ul>
-            </section>
         </aside>
-     </main>
 
-        <!-- SOPORTE -->
-        <section style="text-align:center; padding: 4px;">
+        <aside class="saldo-box">
+            Saldo: <span id="saldoText">Cargando...</span>
+        </aside>
+    </main>
+
+    <footer>
+        <section class="soporte">
             <h3>Soporte Técnico</h3>
             <p>¿Necesitas ayuda? Contactanos:</p>
             <p>Email: <b>soporte@fortunaspiin.com</b></p>
             <p>WhatsApp: <b>+591 67136512</b></p>
         </section>
+    </footer>
 
     <script src="js/ruleta.js"></script>
 </body>

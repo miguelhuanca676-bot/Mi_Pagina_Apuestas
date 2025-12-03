@@ -1,68 +1,65 @@
 /* ==== FONDO GENERAL ==== */
-body{
-    margin:0;
+body {
+    margin: 0;
     font-family: 'Arial', sans-serif;
     background: url("fondo.png") no-repeat center center fixed;
     background-size: cover;
-    color:white;
+    color: white;
 }
 
 /* ==== ENCABEZADO ==== */
-.header{
-    padding:15px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+.header {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background: linear-gradient(90deg, #8b0000, #ff4500, #ffa500);
-    box-shadow:0 2px 15px #ffae00aa;
+    box-shadow: 0 2px 15px #ffae00aa;
 }
 
-.logo span{
-    color:#ffff00;
+.logo span {
+    color: #ffff00;
 }
 
-/*  BOTON DE DEPOSITO */
-.deposit-btn{
-    background:#ff4500;
-    padding:10px 20px;
-    border-radius:10px;
-    border:none;
-    cursor:pointer;
-    font-size:16px;
-    font-weight:bold;
-    transition:0.3s;
-    box-shadow:0 0 10px #ffff00aa;
+.deposit-btn {
+    background: #ff4500;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #ffff00aa;
 }
-.deposit-btn:hover{
-    background:#ff8c00;
+
+.deposit-btn:hover {
+    background: #ff8c00;
 }
 
 /* ==== CONTENEDOR PRINCIPAL ==== */
-.Contenedor-Ruleta{
-    display:flex;
+.Contenedor-Ruleta {
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap:40px;
-    padding:20px;
+    gap: 40px;
+    padding: 20px;
 }
 
 /* ==== RULETA ==== */
-.ruleta-area{
-    position:relative;
-    width:500px;
-    height:500px;
+.ruleta-area {
+    position: relative;
+    width: 500px;
+    height: 500px;
 }
 
-#ruletaCanvas{
-    border-radius:50%;
-    box-shadow:
-        0 0 30px #ff0000aa,
-        0 0 40px #ffa500aa inset,
-        0 0 70px #ffff00aa;
+#ruletaCanvas {
+    border-radius: 50%;
+    box-shadow: 0 0 30px #ff0000aa, 0 0 40px #ffa500aa inset, 0 0 70px #ffff00aa;
 }
 
 #panelUsuario {
-    background: rgba(139,0,0,0.8);
+    background: rgba(139, 0, 0, 0.8);
     padding: 15px;
     border-bottom: 2px solid #ffae00;
     color: white;
@@ -70,114 +67,109 @@ body{
     font-weight: bold;
     text-shadow: 0 0 10px #ffae00;
     display: flex;
-    justify-content: space-between;
-    box-shadow: 0 0 25px #ff4500aa; 
-}
-
-/* ==== PANEL DE APUESTAS ==== */
-.panel-apuesta{
-    background: linear-gradient(160deg, #8b0000, #ff4500, #ffa500);
-    padding:20px;
-    width:280px;
-    border-radius:15px;
-    box-shadow:0 0 30px #ff4500aa, 0 0 40px #ffff00aa;
-    display:flex;
     flex-direction: column;
-    gap:10px;
+    gap: 10px;
+    box-shadow: 0 0 25px #ff4500aa;
+}
+#rojoBtn{
+    background-color: red;
+    border-color: #000;
+}
+#negroBtn{
+    background-color: green;
+    border-color: #000;
+}
+/* ==== PANEL DE APUESTAS ==== */
+.panel-apuesta {
+    background: linear-gradient(160deg, #8b0000, #ff4500, #ffa500);
+    padding: 20px;
+    width: 280px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px #ff4500aa, 0 0 40px #ffff00aa;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.panel-apuesta input{
-    width:100%;
-    padding:8px;
-    margin-bottom:10px;
-    border-radius:6px;
-    border:none;
-    outline:none;
-    font-size:16px;
+.panel-apuesta input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-size: 16px;
 }
 
-/* ==== BOTON RINCIPAL ==== */
-.btn-principal{
-    width:100%;
-    padding:12px;
+/* ==== BOTONES DE OPCIÓN (Rojo/Negro, Par/Impar) ==== */
+.opciones {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.btn-opcion {
+    width: 48%;
+    padding: 12px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #ff4500aa;
+    border: 2px solid #ff4500; /* Borde con color naranja */
+    text-shadow: 0 0 10px #ff0000, 0 0 15px #ff8c00, 0 0 20px #ffff00;
+}
+
+.btn-opcion:hover {
+    background-color: #ff4500;
+    box-shadow: 0 0 20px #ff8c00;
+    border: 2px solid #ff8c00;
+}
+
+/* ==== BOTON PRINCIPAL ==== */
+.btn-principal {
+    width: 100%;
+    padding: 12px;
     background: linear-gradient(90deg, #ff0000, #ff8c00);
-    border:none;
-    color:white;
-    font-weight:bold;
-    cursor:pointer;
-    font-size:18px;
-    border-radius:10px;
-    transition:0.3s;
-    box-shadow:0 0 20px #ff4500aa, 0 0 40px #ffff00aa;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 10px;
+    transition: 0.3s;
+    box-shadow: 0 0 20px #ff4500aa, 0 0 40px #ffff00aa;
 }
-.btn-principal:hover{
+
+.btn-principal:hover {
     background: linear-gradient(90deg, #ff4500, #ffc300);
 }
 
 /* ==== SALDO ==== */
-.saldo-box{
-    position:absolute;
-    top:10px;
-    right:20px;
-    font-size:20px;
-    font-weight:bold;
-    color:#ffff00;
+.saldo-box {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffff00;
     text-shadow: 0 0 10px #ff4500;
 }
 
 /* ==== HISTORIAL ==== */
-.historial{
-    margin-top:20px;
+.historial {
+    margin-top: 20px;
 }
 
-#historialLista{
-    display:flex;
-    flex-wrap: wrap;
-    gap:5px;
-    list-style:none;
-    padding:0;
-}
-
-#historialLista li{
-    padding:5px 10px;
-    font-weight:bold;
-    border-radius:5px;
-    color:black;
-    min-width:30px;
-    text-align:center;
-    background: linear-gradient(90deg, #ff0000, #ffa500, #ffff00);
-    text-shadow: 0 0 5px #fff;
-}
-
-/* ==== RESULTADO ==== */
-#resultadoMensaje{
-    margin-top:15px;
-    padding:10px;
-    border-radius:10px;
-    font-weight:bold;
-    text-align:center;
-    min-height:40px;
-    font-size:20px;
-    text-shadow:0 0 5px #fff;
-}
-
-/* TEXTO DEL NUMRO GANADOR */
-.numero-ganador{
-    font-size: 45px;
-    font-weight: bold;
-    color: #ffff00;
-    text-shadow:
-        0 0 10px #ff0000,
-        0 0 20px #ffa500,
-        0 0 30px #ffff00,
-        0 0 50px #ff4500;
-}
-/* ==== HISTORIAL USUARIO ==== */
 #historialUsuario {
     list-style: none;
     padding: 0;
     margin-top: 10px;
-    max-height: 300px; /* Limita el tamaño y agrega scroll si hay muchas apuestas */
+    max-height: 300px;
     overflow-y: auto;
 }
 
@@ -189,9 +181,10 @@ body{
     font-weight: bold;
     color: #fff;
     box-shadow: 0 0 5px #0005;
+    background: linear-gradient(90deg, #ff0000, #ffa500, #ffff00);
+    text-shadow: 0 0 5px #fff;
 }
 
-/* Colores según resultado */
 #historialUsuario li.GANASTE {
     background: linear-gradient(90deg, #05b887, #00e0a0);
     text-shadow: 0 0 5px #000;
@@ -217,28 +210,49 @@ body{
     border-radius: 4px;
 }
 
-/* ==== PANEL USUARIO ==== */
-#panelUsuario {
-    flex-direction: column; /* para que usuario, saldo e historial se apilen */
-    gap: 10px;
+/* ==== RESULTADO ==== */
+#resultadoMensaje {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+    min-height: 40px;
+    font-size: 20px;
+    text-shadow: 0 0 5px #fff;
 }
 
+/* TEXTO DEL NUMERO GANADOR */
+.numero-ganador {
+    font-size: 45px;
+    font-weight: bold;
+    color: #ffff00;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ffa500, 0 0 30px #ffff00, 0 0 50px #ff4500;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
 
 /* ==== RESPONSIVO ==== */
-@media(max-width:900px){
-    .Contenedor-Ruleta{
+@media (max-width: 900px) {
+    .Contenedor-Ruleta {
         flex-direction: column;
-        align-items:center;
+        align-items: center;
     }
-    .ruleta-area{
-        width:90%;
-        height:auto;
+
+    .ruleta-area {
+        width: 90%;
+        height: auto;
     }
-    #ruletaCanvas{
-        width:100%;
-        height:auto;
+
+    #ruletaCanvas {
+        width: 100%;
+        height: auto;
     }
-    .panel-apuesta{
-        width:90%;
+
+    .panel-apuesta {
+        width: 90%;
     }
 }
