@@ -1,22 +1,30 @@
 body {
-    background: #111;
+    background: #111; /* oscuro tipo casino */
     color: white;
     font-family: Arial;
     padding: 20px;
 }
 
+/* ===== TÍTULO ===== */
 .titulo {
     text-align: center;
-    color: #ff0090;
+    color: #ffea00; /* amarillo dorado */
+    text-shadow: 
+        0 0 5px #ff0000,
+        0 0 10px #ffa500,
+        0 0 20px #ffff00;
 }
 
+/* ===== PANEL ===== */
 .panel {
     margin-top: 30px;
     padding: 20px;
-    background: #222;
+    background: linear-gradient(160deg, #8b0000, #ff4500, #ffa500);
     border-radius: 10px;
+    box-shadow: 0 0 20px #ff0000aa, 0 0 30px #ffa500aa;
 }
 
+/* ===== TABLA ===== */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -25,28 +33,41 @@ table {
 th, td {
     padding: 12px;
     border-bottom: 1px solid #444;
+    text-align: center;
+    color: #ffff00; /* amarillo */
+    text-shadow: 0 0 5px #ff0000, 0 0 10px #ffa500;
 }
 
-/* Inputs */
+/* ===== INPUTS ===== */
 input {
     padding: 8px;
     width: 100px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 5px #ff4500;
 }
+
+/* ===== BOTÓN ===== */
 #btnLimpiarComprobantes{
-    background:red;
+    background: linear-gradient(90deg, #ff0000, #ff8c00);
     color:white;
     padding:12px;
     margin:20px 0;
     border:none;
     font-size:18px;
     cursor:pointer;
-    border-radius:10px;}
-    
+    border-radius:10px;
+    box-shadow: 0 0 15px #ff4500aa, 0 0 25px #ffff00aa;
+}
+
+#btnLimpiarComprobantes:hover{
+    background: linear-gradient(90deg, #ff4500, #ffc300);
+}
 
 /* -----------------------------------------
    RESPONSIVO PARA CELULAR
 ------------------------------------------ */
-
 @media (max-width: 768px) {
 
     th, td {
