@@ -172,6 +172,57 @@ body{
         0 0 30px #ffff00,
         0 0 50px #ff4500;
 }
+/* ==== HISTORIAL USUARIO ==== */
+#historialUsuario {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    max-height: 300px; /* Limita el tamaño y agrega scroll si hay muchas apuestas */
+    overflow-y: auto;
+}
+
+#historialUsuario li {
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    box-shadow: 0 0 5px #0005;
+}
+
+/* Colores según resultado */
+#historialUsuario li.GANASTE {
+    background: linear-gradient(90deg, #05b887, #00e0a0);
+    text-shadow: 0 0 5px #000;
+}
+
+#historialUsuario li.PERDISTE {
+    background: linear-gradient(90deg, #f30317, #ff4c4c);
+    text-shadow: 0 0 5px #000;
+}
+
+/* Scrollbar personalizado */
+#historialUsuario::-webkit-scrollbar {
+    width: 8px;
+}
+
+#historialUsuario::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+#historialUsuario::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 0, 0.7);
+    border-radius: 4px;
+}
+
+/* ==== PANEL USUARIO ==== */
+#panelUsuario {
+    flex-direction: column; /* para que usuario, saldo e historial se apilen */
+    gap: 10px;
+}
+
 
 /* ==== RESPONSIVO ==== */
 @media(max-width:900px){
