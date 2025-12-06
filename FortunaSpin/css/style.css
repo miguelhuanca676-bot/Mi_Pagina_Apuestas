@@ -20,9 +20,7 @@ body {
     color: white;
 }
 
-/* ------------------------------
-   HEADER
------------------------------- */
+
 .header {
     width: 100%;
     padding: 15px 25px;
@@ -111,9 +109,7 @@ body {
     box-shadow: 0 0 25px #ff7000, 0 0 40px #ff3300;
 }
 
-/* ------------------------------
-   FORMULARIOS (LOGIN / REGISTRO)
------------------------------- */
+
 
 .main-login {
     width: 90%;
@@ -166,9 +162,7 @@ body {
     border: 1px solid #ff6a00;
 }
 
-/* ------------------------------
-   BENEFICIOS - ESTILO FUEGO
------------------------------- */
+
 .beneficios {
     padding: 40px;
     margin: 25px 40px;
@@ -199,9 +193,7 @@ body {
     box-shadow: 0 0 15px #ff7700;
 }
 
-/* ------------------------------
-   FOOTER
------------------------------- */
+
 .footer {
     margin-top: 40px;
     padding: 20px;
@@ -213,9 +205,7 @@ body {
     border-top: 2px solid #ff3d00;
 }
 
-/* ------------------------------
-   RESPONSIVE
------------------------------- */
+
 @media (max-width: 768px) {
     .logo {
         font-size: 26px;
@@ -223,5 +213,30 @@ body {
 
     .beneficios li {
         width: 95%;
+    }
+}
+.tipologin .btn-principal {
+    text-align: center;     /* centrar texto */
+    display: flex;
+    justify-content: center; /* centrar horizontalmente */
+    align-items: center;     /* centrar verticalmente */
+}
+
+@media (min-width: 769px) {
+
+    .tipologin {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;        
+        box-sizing: border-box;
+    }
+
+    .tipologin .btn-principal {
+        flex: 1;            /* ambos mismo tamaño */
+        max-width: 200px;   /* evita que se hagan demasiado anchos */
+        white-space: nowrap;
+        
     }
 }

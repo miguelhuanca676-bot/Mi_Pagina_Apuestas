@@ -279,6 +279,7 @@ function mostrarResultado() {
     localStorage.setItem(`historial_${nombreUsuarioActivo}`, JSON.stringify(historialUsuario));
     actualizarHistorialUsuario();
 
+    // 🔥🔥🔥 ESTA ES LA ÚNICA LÍNEA NUEVA 🔥🔥🔥
     resultadoMensaje.textContent = `SALIO ${ganador}`;
 }
 

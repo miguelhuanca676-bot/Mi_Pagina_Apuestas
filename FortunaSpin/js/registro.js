@@ -1,7 +1,4 @@
-/* --------------------------------------------
-   REGISTRO PASO 1
-   Guarda los datos iniciales en localStorage
-   -------------------------------------------- */
+
 
 // Verifica si el archivo existe antes de usarlo
 document.addEventListener("DOMContentLoaded", () => {
