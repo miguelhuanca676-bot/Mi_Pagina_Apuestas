@@ -29,7 +29,7 @@ window.sumarSaldo = (usuario) => {
     if (!montoInput) return alert("Usuario no encontrado.");
 
     const monto = Number(montoInput.value);
-    if (isNaN(monto) || monto <= 0) return alert("Ingrese un monto válido.");
+    if (isNaN(monto) || monto <= 0) return alert("Ingrese un monto valido.");
 
     const index = usuarios.findIndex(u => u.usuario === usuario);
     if (index === -1) return alert("Usuario no encontrado.");

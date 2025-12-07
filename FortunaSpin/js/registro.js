@@ -30,10 +30,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    /* --------------------------------------------
+    /* 
        REGISTRO PASO 2
        Completa registro y guarda usuario en localStorage
-       -------------------------------------------- */
+      */
 
     const form2 = document.getElementById("formPaso2");
 

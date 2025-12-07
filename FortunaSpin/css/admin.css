@@ -1,5 +1,5 @@
 body {
-    background: #111; /* oscuro tipo casino */
+    background: #111; 
     color: white;
     font-family: Arial;
     padding: 20px;
@@ -65,9 +65,7 @@ input {
     background: linear-gradient(90deg, #ff4500, #ffc300);
 }
 
-/* -----------------------------------------
-   RESPONSIVO PARA CELULAR
------------------------------------------- */
+
 @media (max-width: 768px) {
 
     th, td {

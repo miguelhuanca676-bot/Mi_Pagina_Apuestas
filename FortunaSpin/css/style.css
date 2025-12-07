@@ -1,11 +1,7 @@
-/* ------------------------------
-   IMPORTAR FUENTES PRO
------------------------------- */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Bebas+Neue&display=swap');
 
-/* ------------------------------
-   ESTILOS GENERALES
------------------------------- */
+
 * {
     margin: 0;
     padding: 0;
@@ -63,9 +59,7 @@ body {
     box-shadow: 0 0 12px #ff3300, 0 0 20px #ff6600;
 }
 
-/* ------------------------------
-   SECCIÓN BIENVENIDA
------------------------------- */
+
 .Bienveida {
     text-align: center;
     padding: 80px 20px;
@@ -216,10 +210,10 @@ body {
     }
 }
 .tipologin .btn-principal {
-    text-align: center;     /* centrar texto */
+    text-align: center;     
     display: flex;
-    justify-content: center; /* centrar horizontalmente */
-    align-items: center;     /* centrar verticalmente */
+    justify-content: center; 
+    align-items: center;     
 }
 
 @media (min-width: 769px) {
@@ -234,8 +228,8 @@ body {
     }
 
     .tipologin .btn-principal {
-        flex: 1;            /* ambos mismo tamaño */
-        max-width: 200px;   /* evita que se hagan demasiado anchos */
+        flex: 1;            
+        max-width: 200px;   
         white-space: nowrap;
         
     }
