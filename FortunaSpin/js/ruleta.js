@@ -338,6 +338,20 @@ function cerrarSesion() {
     window.location.href = "index.html";
 }
 
+// MENU HAMBURGUESA
+const hamburger = document.getElementById("hamburger");
+const menuLinks = document.getElementById("menuLinks");
+
+hamburger.addEventListener("click", () => {
+    menuLinks.classList.toggle("show");
+});
+
+// FUNCIONALIDAD DEL BOTON SALIR
+document.getElementById("salirBtn").addEventListener("click", () => {
+    localStorage.removeItem("sesionActiva");
+    window.location.href = "index.html";
+});
+
 
 // ===== EVENTOS =====
 btnApostar?.addEventListener("click", procesarApuesta);

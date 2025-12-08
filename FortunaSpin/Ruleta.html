@@ -8,12 +8,19 @@
 </head>
 <body>
 
-    <header class="header">
-        <h1 class="logo">Fortuna<span>Spin</span></h1>
-         <button class="logout-btn" onclick="cerrarSesion()"> Salir</button>
-        <button class="retirar-btn" onclick="window.location.href='retirar.html'">🏧 Retirar</button>
-        <button class="deposit-btn" onclick="window.location.href='deposito.html'">💰 Depositar</button>
-    </header>
+<header class="header">
+    <h1 class="logo">Fortuna<span>Spin</span></h1>
+
+    <nav class="menu">
+        <button id="hamburger" class="hamburger" aria-label="Menú">&#9776;</button>
+        <ul class="menu-links" id="menuLinks">
+            <li><a class="deposito-btn" href="deposito.html">💰 Depositar</a></li>
+            <li><a class="retirar-btn" href="retirar.html">💵 Retirar</a></li>
+            <li><button id="salirBtn" class="salir-btn">🚪 Salir</button></li>
+        </ul>
+    </nav>
+</header>
+
 
     <main class="Contenedor-Ruleta">
 
