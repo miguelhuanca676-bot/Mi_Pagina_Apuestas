@@ -1,0 +1,76 @@
+/* ==== FONDO GENERAL ==== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url("fondo.png") no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* ==== CONTENEDOR PRINCIPAL ==== */
+.retirar-main {
+    background: rgba(0,0,0,0.6);
+    padding: 40px 60px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px #ff4500aa;
+}
+
+/* ==== ENCABEZADO ==== */
+header h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px #ff4500, 0 0 20px #ffa500;
+}
+
+/* ==== INFORMACION ==== */
+.info p {
+    font-size: 18px;
+    color: #fff8;
+    margin-bottom: 30px;
+}
+
+/* ==== BOTONES ==== */
+.botones {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+a.whatsapp-link, a.volver-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+/* Botn WhatsApp */
+a.whatsapp-link {
+    background: linear-gradient(90deg, #25d366, #128c7e);
+    color: white;
+    box-shadow: 0 0 15px #25d366aa;
+}
+
+a.whatsapp-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #25d366ff;
+}
+
+/* Botn Volver */
+a.volver-btn {
+    background: linear-gradient(90deg, #ff4500, #ff8c00);
+    color: white;
+    box-shadow: 0 0 15px #ff4500aa;
+}
+
+a.volver-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #ff4500ff;
+}

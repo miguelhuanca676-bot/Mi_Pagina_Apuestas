@@ -1,5 +1,3 @@
-
-
 // Verifica si el archivo existe antes de usarlo
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -10,12 +8,23 @@ document.addEventListener("DOMContentLoaded", () => {
         form1.addEventListener("submit", (e) => {
             e.preventDefault();
 
+            // Verificar si el usuario ya existe
+            const usuarioIngresado = document.getElementById("usuario").value;
+            const usuariosGuardados = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+            const existe = usuariosGuardados.some(u => u.usuario === usuarioIngresado);
+
+            if (existe) {
+                alert("ESE NOMBRE DE USUARIO YA EXISTE, ELIGE OTRO");
+                return; // Detener registro
+            }
+
             // Creamos un objeto con los datos
             const datosPaso1 = {
                 pais: document.getElementById("pais").value,
                 nombre: document.getElementById("nombre").value,
                 apellido: document.getElementById("apellido").value,
-                usuario: document.getElementById("usuario").value,
+                usuario: usuarioIngresado,
                 correo: document.getElementById("correo").value,
                 password: document.getElementById("password").value,
                 celular: document.getElementById("celular").value

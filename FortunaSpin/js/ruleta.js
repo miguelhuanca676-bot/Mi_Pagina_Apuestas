@@ -325,6 +325,19 @@ function actualizarHistorial(num){
     historialLista.prepend(li);
     if(historialLista.children.length>10) historialLista.removeChild(historialLista.lastChild);
 }
+// === CERRAR SESIÓN ===
+function cerrarSesion() {
+    // Confirmación opcional, puedes quitarla si quieres salida instantánea
+    if (!confirm("¿Seguro que deseas salir de la página?")) return;
+
+    // Eliminar todos los datos de sesión
+    localStorage.removeItem("sesionActiva");
+    localStorage.removeItem("fortunaSpinSaldo");
+
+    // Redirigir al inicio
+    window.location.href = "index.html";
+}
+
 
 // ===== EVENTOS =====
 btnApostar?.addEventListener("click", procesarApuesta);

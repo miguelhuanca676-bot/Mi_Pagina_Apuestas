@@ -24,6 +24,7 @@ body{
 /*  BOTON DE DEPOSITO */
 .deposit-btn{
     background:#ff4500;
+    color:white;
     padding:10px 20px;
     border-radius:10px;
     border:none;
@@ -31,10 +32,11 @@ body{
     font-size:16px;
     font-weight:bold;
     transition:0.3s;
-    box-shadow:0 0 10px #ffff00aa;
+    box-shadow:0 0 10px #e8fd01f1;
 }
 .deposit-btn:hover{
-    background:#ff8c00;
+    transform: scale(1.05);
+    background:#ff1900;
 }
 
 /* ==== CONTENEDOR PRINCIPAL ==== */
@@ -216,6 +218,49 @@ body{
     background: rgba(255, 255, 0, 0.7);
     border-radius: 4px;
 }
+/* BONTON SALIR */
+.logout-btn {
+    background: linear-gradient(90deg, #7a0000, #b30000);
+    color: #fff;
+    padding: 10px 22px;
+    border: 2px solid #ffcc00;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 12px #ff0000aa, inset 0 0 10px #660000;
+}
+
+.logout-btn:hover {
+    background: linear-gradient(90deg, #cc0000, #ff1a1a);
+    transform: scale(1.05);
+    box-shadow: 0 0 18px #ff3b3baa, inset 0 0 12px #990000;
+    border-color: #ffff55;
+}
+
+
+.logout-btn:hover {
+    background: #ff1a1a;
+}
+.retirar-btn {
+    background: linear-gradient(90deg, #f40b0b, #ff5900); /* azul elegante */
+    color: white;
+    padding: 10px 22px;
+    border-radius: 10px;
+    border: 2px solid #f6ff00;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s ;
+}
+
+.retirar-btn:hover {
+    transform: scale(1.05);
+    border-color: #aaffff;
+}
+
+
 
 /* ==== PANEL USUARIO ==== */
 #panelUsuario {

@@ -23,32 +23,46 @@ const renderUsuarios = () => {
 // Cambiar encabezado de columna
 document.querySelector("#tablaUsuarios thead th:nth-child(2)").textContent = "Saldo acumulado";
 
-// === SUMAR SALDO ===
+// === SUMAR O RESTAR SALDO ===
 window.sumarSaldo = (usuario) => {
     const montoInput = document.getElementById("montoASumar_" + usuario);
     if (!montoInput) return alert("Usuario no encontrado.");
 
-    const monto = Number(montoInput.value);
-    if (isNaN(monto) || monto <= 0) return alert("Ingrese un monto valido.");
+    let monto = Number(montoInput.value);
+    if (isNaN(monto) || monto === 0) return alert("Ingrese un monto válido (puede ser negativo).");
 
     const index = usuarios.findIndex(u => u.usuario === usuario);
     if (index === -1) return alert("Usuario no encontrado.");
 
-    if (usuarios[index].saldo <= 0) {
-        usuarios[index].saldo = monto;              // saldo acumulado
-        localStorage.setItem("fortunaSpinSaldo", monto.toFixed(2)); // saldo actual para apostar
-    } else {
-        usuarios[index].saldo += monto;            // acumula
-        const saldoActual = parseFloat(localStorage.getItem("fortunaSpinSaldo")) || 0;
-        localStorage.setItem("fortunaSpinSaldo", (saldoActual + monto).toFixed(2)); // suma al saldo actual
-    }
+    // === SALDO ACTUAL DEL USUARIO ===
+    let saldoActualUsuario = usuarios[index].saldo || 0;
 
-    // Guardar cambios en usuarios
+    // === NUEVO SALDO ===
+    let nuevoSaldo = saldoActualUsuario + monto;
+
+    // Evitar saldo negativo
+    if (nuevoSaldo < 0) nuevoSaldo = 0;
+
+    usuarios[index].saldo = nuevoSaldo;
+
+    // === ACTUALIZAR SALDO GLOBAL DE RULETA ===
+    let saldoRuleta = parseFloat(localStorage.getItem("fortunaSpinSaldo")) || 0;
+    saldoRuleta += monto;
+
+    // Evitar saldo negativo en la ruleta también
+    if (saldoRuleta < 0) saldoRuleta = 0;
+
+    localStorage.setItem("fortunaSpinSaldo", saldoRuleta.toFixed(2));
+
+    // Guardar cambios
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
-    alert(`Saldo actualizado correctamente ,ACUMULADO: Bs ${usuarios[index].saldo.toFixed(2)}`);
+    // Mostrar mensaje
+    alert(`Saldo actualizado. Nuevo saldo de ${usuario}: Bs ${nuevoSaldo.toFixed(2)}`);
+
     renderUsuarios();
 };
+
 
 
 // === ELIMINAR USUARIO ===
